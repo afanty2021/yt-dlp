@@ -199,6 +199,18 @@ A: 为提高启动速度，提取器采用懒加载机制，只有需要时才�
 - `instagram.py` - Instagram
 - `twitter.py` - X/Twitter
 - `tiktok.py` - TikTok
+- `nhk.py` - NHK（日本广播协会）
+- `patreon.py` - Patreon
+- `fc2.py` - FC2
+- `tubitv.py` - TubiTV
+
+### 新增提取器（2025.11.12）
+- `agalega.py` - Agalega 平台
+- `bitmovin.py` - Bitmovin 视频平台
+- `frontro.py` - Frontro 平台
+- `netapp.py` - NetApp 视频服务
+- `nowcanal.py` - Now Canal 视频平台
+- `yfanefa.py` - YFA NEFA 平台
 
 ### 辅助模块
 - `adobepass.py` - Adobe Pass 认证
@@ -235,6 +247,18 @@ python -m devscripts.make_lazy_extractors
 ```
 
 ## 变更记录 (Changelog)
+
+### 2025-12-04
+- **新增提取器支持**:
+  - 6 个新平台提取器：agalega、bitmovin、frontro、netapp、nowcanal、yfanefa
+  - 提取器总数突破 1000+
+- **核心提取器改进**:
+  - YouTube：新增 `use_ad_playback_context` 参数，改进广告处理
+  - NHK：全面重构，提升稳定性和性能
+  - FC2：改进直播流处理，正确显示离线状态
+  - S4C：修复地理限制内容访问
+  - Patreon：修复提取器问题
+  - TubiTV：修复系列内容提取
 
 ### 2025-11-19
 - 创建提取器模块文档

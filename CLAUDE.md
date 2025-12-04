@@ -120,6 +120,27 @@ python -m devscripts.pyinstaller
 
 ## 变更记录 (Changelog)
 
+### 2025-12-04
+- **版本同步**: 更新到 2025.11.12 版本
+- **新增提取器**:
+  - agalega.py - 新增 Agalega 平台支持
+  - bitmovin.py - 新增 Bitmovin 视频平台支持
+  - frontro.py - 新增 Frontro 平台支持
+  - netapp.py - 新增 NetApp 视频服务支持
+  - nowcanal.py - 新增 Now Canal 视频平台支持
+  - yfanefa.py - 新增 YFA NEFA 平台支持
+- **改进功能**:
+  - YouTube 提取器增强 `use_ad_playback_context` 参数支持
+  - NHK 提取器全面重构，提升稳定性和性能
+  - FC2 直播改进，离线流显示适当错误
+  - S4C 地理限制内容修复
+  - Patreon 提取器问题修复
+  - JS 运行时性能提升
+  - 网络模块增强，支持更多代理配置
+- **构建更新**:
+  - PyInstaller 最低版本要求更新到 6.17.0
+  - 测试套件扩展，新增网络和 WebSocket 测试
+
 ### 2025-11-19
 - 初始化项目架构文档
 - 创建模块索引和架构图

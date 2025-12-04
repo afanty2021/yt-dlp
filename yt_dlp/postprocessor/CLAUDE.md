@@ -275,6 +275,16 @@ register_plugin_spec(PluginSpec(
 
 ## 变更记录 (Changelog)
 
+### 2025-12-04
+- **FFmpeg 集成改进**:
+  - 修复 FFmpeg 路径处理问题
+  - 改进 FFmpeg 命令行参数构建
+  - 增强对 FFmpeg 新版本的支持
+- **SponsorBlock 增强**:
+  - 修复 API 调用问题
+  - 改进章节标记处理
+  - 优化错误处理机制
+
 ### 2025-11-19
 - 创建后处理器模块文档
 - 分析所有后处理器类型和功能
