@@ -204,6 +204,9 @@ A: 为提高启动速度，提取器采用懒加载机制，只有需要时才�
 - `fc2.py` - FC2
 - `tubitv.py` - TubiTV
 
+### 新增提取器（2025.12.08）
+- `alibaba.py` - 阿里巴巴商品详情页视频提取器
+
 ### 新增提取器（2025.11.12）
 - `agalega.py` - Agalega 平台
 - `bitmovin.py` - Bitmovin 视频平台
@@ -247,6 +250,20 @@ python -m devscripts.make_lazy_extractors
 ```
 
 ## 变更记录 (Changelog)
+
+### 2025-12-08
+- **新增提取器**:
+  - 阿里巴巴（alibaba.py）：支持阿里巴巴商品详情页视频提取
+- **核心提取器改进**:
+  - YouTube：更新 EJS 到 0.3.2 版本，改进 JS 运行时错误提示
+  - Archive.org：大幅改进，支持更多媒体类型和元数据提取
+  - Loom：重构提取逻辑，提升稳定性
+  - SportDeutschland：优化直播和视频点播提取
+  - XHamster：修复视频解析问题，改进格式检测
+- **辅助功能优化**:
+  - Cookie 处理增强兼容性，支持更多网站
+  - FFmpeg 后处理器优化集成
+  - JS 运行时错误提示更加友好
 
 ### 2025-12-04
 - **新增提取器支持**:
