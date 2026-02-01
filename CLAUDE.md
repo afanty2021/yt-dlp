@@ -452,11 +452,79 @@ test = [
 
 ## 变更记录 (Changelog)
 
+### 2026-02-01
+- **版本同步**: 更新到 2026.01.31 版本
+- **文档更新**: 全面更新变更记录，记录所有最新变更
+- **覆盖范围**: 涵盖 2025.12.08 - 2026.01.31 共 104 次提交
+
 ### 2026-01-12
 - **文档更新**: 全面更新架构文档和模块索引
 - **模块文档**: 新增 utils 和 compat 模块文档
 - **覆盖率**: 整体文档覆盖率达到 100%
 - **结构优化**: 完善模块导航面包屑和 Mermaid 结构图
+
+### 2026-01-31 (最新版本)
+**提取器变更**:
+- **soop**: 支持订阅者专属 VOD 下载
+- **youtube**:
+  - 为 `android_vr` 客户端添加 `web_embedded` 回退支持
+  - 移除损坏的 `ios_downgraded` 播放器客户端
+  - 移除损坏的 `tv_embedded` 播放器客户端
+
+### 2026-01-29 (重大更新)
+**核心功能改进**:
+- `--sleep-subtitles`: 支持浮点数值
+- 新增 `--compat-options 2025` 兼容性选项
+- 新增 `--format-sort-reset` 选项
+- 修复并发格式下载到 stdout 的功能
+- 修复下载到 stdout 时的交互式格式选择
+- 支持通过 Python 包安装的 Deno
+
+**工具库改进** (`yt_dlp/utils/`):
+- `decode_packed_codes`: 修复缺失键处理
+- `devalue`: 修复缓存值的 reviver 调用
+- `js_to_json`: 防止八进制误判
+- `mimetype2ext`: 识别更多 srt 类型
+- `unified_timestamp`: 新增 `tz_offset` 参数
+
+**新增提取器**:
+- **errarhiiv**: ERRArhiiv 平台支持
+- **croatian.film**: 克罗地亚电影平台
+- **filmarchiv**: 电影档案平台
+- **pandatv**: Panda TV 直播平台
+- **tarangplus**: Tarang Plus 印度平台（多个提取器）
+- **volejtv**: Volej TV 体育频道（多个提取器）
+- **nebula**: 新增 season 提取器
+
+**移除提取器**:
+- **manoto**: Manoto TV（已失效）
+- **nextmedia**: 多个香港媒体平台（已失效）
+- **scte**: SCTE 提取器（已失效）
+
+**提取器改进**:
+- **YouTube**:
+  - 调整默认客户端配置
+  - 修复 `player_skip=js` 参数
+  - 为 manifest 格式解决 n 挑战
+  - 新增评论子线程支持
+  - 更新 EJS 到 0.4.0 版本
+  - 修复 Shorts 平铺缩略图提取
+- **TikTok**: 使用原生 Python 实现 JS 挑战求解
+- **Facebook**: 移除损坏的登录支持
+- **Twitter**: 移除损坏的登录支持
+- **iqiyi**: 移除损坏的登录支持
+- **Patreon**: 提取内联媒体
+- **Vimeo**: 新增 `macos` 客户端支持
+- **generic**: 改进 TLS 指纹导致的阻塞检测
+
+**网络层改进**:
+- curl_cffi: 支持 `curl-cffi` 0.14.x 版本
+
+**构建/CI 改进**:
+- 官方 GitHub Actions 更新到最新版本
+- 加固 CI/CD 管道
+- 改进 nightly 版本检查
+- 显式声明权限并限制凭据
 
 ### 2025-12-08
 - **版本同步**: 更新到 2025.12.08 版本
@@ -510,5 +578,5 @@ test = [
 
 ---
 
-*文档最后更新: 2026-01-12*
+*文档最后更新: 2026-02-01*
 *扫描覆盖率: 100% (核心模块) | 99.5% (提取器模块)*
